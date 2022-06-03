@@ -1,0 +1,19 @@
+[package]
+name = "dummyOS"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+default = []
+bsp_rpi3 = []
+bsp_rpi4 = []
+
+[profile.release]
+lto = true
+panic = "abort"
+
+[profile.dev]
+panic = "abort"
+
+[dependencies]
