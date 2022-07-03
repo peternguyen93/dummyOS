@@ -1,5 +1,12 @@
 [unstable]
 build-std = ["core", "compiler_builtins"]
 
-# [target]
-# build = "aarch64-unknown-none-softfloat"
+# Kernel linker flags
+[target.aarch64-unknown-none-softfloat]
+rustflags = [
+	"-C", "link-arg=--library-path=./src/bsp/raspberrypi",
+	"-C", "link-arg=--script=./src/bsp/raspberrypi/kernel.ld"
+]
+
+[build]
+target = "aarch64-unknown-none-softfloat"

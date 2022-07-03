@@ -8,11 +8,15 @@
 
 mod bsp;
 mod cpu;
+mod console;
+mod print;
 mod panic;
 
 #[no_mangle]
 pub extern "C" fn kernel_init() -> ! {
     loop {
-        
+        println!("Dummy OS is booted");
+
+        //panic::panic();
     }
 }
