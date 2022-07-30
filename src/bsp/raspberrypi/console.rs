@@ -7,8 +7,8 @@ use core::fmt;
 
 struct QEMUOutput;
 
+// serial address for output characters in qemu-system-aarch64
 const QEMU_SERIAL_ADDRESS: u64 = 0x3F20_1000;
-
 impl fmt::Write for QEMUOutput {
     // implement Rust traits fmt::Write to QEMUOutput structure
     fn write_str(&mut self, s: &str) -> fmt::Result {
