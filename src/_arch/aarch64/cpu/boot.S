@@ -11,8 +11,7 @@
 _start:
 	# read boot core
 	mrs x1, MPIDR_EL1
-	ldr x9, CONST_CORE_ID_MASK
-	and x1, x1, x9
+	and x1, x1, {CONST_CORE_ID_MASK}
 	ldr x2, BOOT_CORE_ID
 	cmp x1, x2
 	b.ne .L_wait_forever

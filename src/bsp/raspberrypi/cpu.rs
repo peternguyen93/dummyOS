@@ -1,11 +1,7 @@
 
 //
-// CPU Public declaration for raspberry pi Board
+// CPU Public declaration for Raspberry Pi Board
 //
-
-#[no_mangle]
-#[link_section = ".text._start_arguments"]
-pub static CONST_CORE_ID_MASK: u64 = 0b11;
 
 #[no_mangle]
 #[link_section = ".text._start_arguments"]

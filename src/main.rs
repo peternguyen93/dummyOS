@@ -3,7 +3,7 @@
  *
  */
 
-//#![feature(asm_const)]
+#![feature(asm_const)]
 #![feature(format_args_nl)]
 #![feature(panic_info_message)]
 #![no_main]
