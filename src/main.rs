@@ -14,11 +14,12 @@ mod cpu;
 mod console;
 mod print;
 mod panic;
+mod synchronization;
 
 #[no_mangle]
 pub extern "C" fn kernel_init() -> ! {
     loop {
         println!("Starting Dummy OS...");
-        panic!("Trigger panic here");
+        panic!("Halt");
     }
 }

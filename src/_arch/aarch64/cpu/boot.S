@@ -9,7 +9,7 @@
 .section .text._start
 
 _start:
-	# read boot core
+	// read boot core
 	mrs x1, MPIDR_EL1
 	and x1, x1, {CONST_CORE_ID_MASK}
 	ldr x2, BOOT_CORE_ID

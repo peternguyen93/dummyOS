@@ -9,8 +9,7 @@ pub mod interface {
     pub use core::fmt::Write;
 }
 
-pub fn console() -> impl interface::Write {
+pub fn console() -> &'static bsp::console::SpinLockQemuOutput {
     // call the custom implement for interface::Write in bsp/raspberrypi/console.rs
     bsp::console::console()
 }
-
